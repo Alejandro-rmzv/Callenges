@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewSwiftViewController" customModule="Challenge" customModuleProvider="target">
+            <connections>
+                <outlet property="graphicView" destination="39W-08-dLy" id="CTZ-b9-clb"/>
+                <outlet property="segmentControl" destination="Pkd-7J-TA5" id="bRd-kj-The"/>
+                <outlet property="view" destination="jnn-e1-VM2" id="iHf-eH-dMG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jnn-e1-VM2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="615"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hud-zm-c5h">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                    <color key="backgroundColor" name="titleBarBackGroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuT-LL-ECF" userLabel="Top Bar">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Historial USD-EUR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X5g-Ao-QY7">
+                            <rect key="frame" x="16" y="11.5" width="151.5" height="21"/>
+                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="18"/>
+                            <color key="textColor" name="titleBarText"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="titleBarBackGroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="37t-eI-5un"/>
+                        <constraint firstItem="X5g-Ao-QY7" firstAttribute="leading" secondItem="LuT-LL-ECF" secondAttribute="leading" constant="16" id="RGX-xu-6Hb"/>
+                        <constraint firstItem="X5g-Ao-QY7" firstAttribute="centerY" secondItem="LuT-LL-ECF" secondAttribute="centerY" id="VMs-RQ-ZkN"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El precio de mercado en USD para intercambios en EUR" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeF-Rs-GzX">
+                    <rect key="frame" x="16" y="68" width="343" height="33.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33.5" id="OC6-cE-wfe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" name="DescribeText"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39W-08-dLy">
+                    <rect key="frame" x="16" y="198" width="343" height="221"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="221" id="Kv9-n7-BLI"/>
+                    </constraints>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pkd-7J-TA5">
+                    <rect key="frame" x="82" y="132" width="212" height="32"/>
+                    <segments>
+                        <segment title="1 semana"/>
+                        <segment title="10 días"/>
+                        <segment title="14 días"/>
+                    </segments>
+                    <connections>
+                        <action selector="indexChange:" destination="-1" eventType="valueChanged" id="hVg-N0-IrD"/>
+                    </connections>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L8-sL-5wq">
+                    <rect key="frame" x="48" y="180" width="60" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" name="DescribeText"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="WeF-Ni-Mso"/>
+            <color key="backgroundColor" name="backGroundInitCells"/>
+            <constraints>
+                <constraint firstItem="39W-08-dLy" firstAttribute="top" secondItem="8L8-sL-5wq" secondAttribute="bottom" constant="2" id="6Ii-JW-CyD"/>
+                <constraint firstItem="39W-08-dLy" firstAttribute="top" secondItem="Pkd-7J-TA5" secondAttribute="bottom" constant="35" id="BUj-zY-W1l"/>
+                <constraint firstItem="WeF-Ni-Mso" firstAttribute="trailing" secondItem="39W-08-dLy" secondAttribute="trailing" constant="16" id="DbX-kK-JtM"/>
+                <constraint firstAttribute="trailing" secondItem="hud-zm-c5h" secondAttribute="trailing" id="E6U-gl-Ekd"/>
+                <constraint firstItem="WeF-Ni-Mso" firstAttribute="trailing" secondItem="OeF-Rs-GzX" secondAttribute="trailing" constant="16" id="F65-ax-173"/>
+                <constraint firstItem="OeF-Rs-GzX" firstAttribute="leading" secondItem="WeF-Ni-Mso" secondAttribute="leading" constant="16" id="G13-fy-YLf"/>
+                <constraint firstItem="Pkd-7J-TA5" firstAttribute="top" secondItem="OeF-Rs-GzX" secondAttribute="bottom" constant="30.5" id="GfO-UO-HtR"/>
+                <constraint firstItem="LuT-LL-ECF" firstAttribute="leading" secondItem="jnn-e1-VM2" secondAttribute="leading" id="KoC-B1-hbl"/>
+                <constraint firstItem="hud-zm-c5h" firstAttribute="top" secondItem="jnn-e1-VM2" secondAttribute="top" id="MVb-nX-AU4"/>
+                <constraint firstItem="8L8-sL-5wq" firstAttribute="leading" secondItem="WeF-Ni-Mso" secondAttribute="leading" constant="48" id="PmF-RV-BhR"/>
+                <constraint firstAttribute="trailing" secondItem="LuT-LL-ECF" secondAttribute="trailing" id="RMU-K7-n2g"/>
+                <constraint firstItem="LuT-LL-ECF" firstAttribute="top" secondItem="WeF-Ni-Mso" secondAttribute="top" id="TDe-0m-WO8"/>
+                <constraint firstItem="LuT-LL-ECF" firstAttribute="top" secondItem="hud-zm-c5h" secondAttribute="bottom" id="UYq-Jr-old"/>
+                <constraint firstItem="39W-08-dLy" firstAttribute="leading" secondItem="WeF-Ni-Mso" secondAttribute="leading" constant="16" id="aim-GL-Om5"/>
+                <constraint firstItem="WeF-Ni-Mso" firstAttribute="trailing" secondItem="Pkd-7J-TA5" secondAttribute="trailing" constant="81" id="bcS-La-Ck1"/>
+                <constraint firstItem="OeF-Rs-GzX" firstAttribute="top" secondItem="LuT-LL-ECF" secondAttribute="bottom" constant="24" id="e3x-WZ-2UT"/>
+                <constraint firstItem="Pkd-7J-TA5" firstAttribute="leading" secondItem="WeF-Ni-Mso" secondAttribute="leading" constant="82" id="fqe-Sc-VIx"/>
+                <constraint firstItem="hud-zm-c5h" firstAttribute="leading" secondItem="jnn-e1-VM2" secondAttribute="leading" id="hgH-Zj-QbE"/>
+                <constraint firstItem="WeF-Ni-Mso" firstAttribute="trailing" secondItem="8L8-sL-5wq" secondAttribute="trailing" constant="267" id="pSD-XL-3Yr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34.399999999999999" y="17.541229385307346"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="DescribeText">
+            <color red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backGroundInitCells">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="titleBarBackGroundColor">
+            <color red="0.0" green="0.32156862745098042" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="titleBarText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
