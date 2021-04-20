@@ -128,7 +128,7 @@ extension MainViewSwiftViewController: MainViewSwiftViewProtocol{
     func checkDate() {
         let defaults = UserDefaults.standard
         let dateKey = date.getFormattedDate(format: Constants.formatDate)
-        let key: String = defaults.object(forKey: "Date") as! String
+        let key: String = defaults.object(forKey: "Date") as? String ?? ""
         if key != dateKey {
             mutableDataW = NSMutableDictionary()
             mutableDataOM = NSMutableDictionary()
