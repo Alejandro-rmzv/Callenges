@@ -28,9 +28,20 @@ struct WebService {
                                     let model = try decoder.decode(RatesModel.self, from:response.data!)
                                     completion(model)
                                 }catch{
-                                    print("could not start reachability notifier")
+                                    let json: RatesModel = RatesModel(success: false,
+                                                                      base: "",
+                                                                      date: "",
+                                                                      rates: RateModel(USD: 0.0))
+                                                            completion(json)
+                                    completion(json)
                                 }
                             case .failure(let error):
+                                let json: RatesModel = RatesModel(success: false,
+                                                                  base: "",
+                                                                  date: "",
+                                                                  rates: RateModel(USD: 0.0))
+                                                        completion(json)
+                                completion(json)
                                 print(error)
                             }
                     }
